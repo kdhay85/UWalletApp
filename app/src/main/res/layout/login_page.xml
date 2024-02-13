@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/um_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.131" />
+
+    <TextView
+        android:id="@+id/uwallet_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UWallet"
+        android:textColor="#FFFFFF"
+        android:textSize="75sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="#FFFFFF"
+        android:hint="Email Address"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/uwallet_text"
+        tools:layout_editor_absoluteX="-17dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:hint="Password"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/loginSubmitButton"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/loginSubmitButton"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordEditText"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+        android:onClick="loginClick"
+        app:layout_constraintVertical_bias="0.453" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

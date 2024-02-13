@@ -1,0 +1,674 @@
+{
+  "name": "login_sign_up",
+  "version": 33,
+  "source-key": {
+    "type": "figma",
+    "file": "YvkODKbRNRK8xU5p8OnQvM",
+    "node": "1:2",
+    "version": "5078960611",
+    "component-id": "f18ae26db88e77ca4216e973c438f54b8025a301"
+  },
+  "default": "Login/Sign up",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "group",
+        "id": "Top Bar"
+      },
+      {
+        "type": "group",
+        "id": "SignupBtn"
+      },
+      {
+        "type": "image",
+        "id": "image 1"
+      },
+      {
+        "type": "text",
+        "id": "UWallet"
+      },
+      {
+        "type": "group",
+        "id": "LoginBtn"
+      },
+      {
+        "type": "group",
+        "id": "top"
+      },
+      {
+        "type": "group",
+        "id": "content"
+      },
+      {
+        "type": "vector",
+        "id": "time"
+      },
+      {
+        "type": "vector",
+        "id": "battery"
+      },
+      {
+        "type": "vector",
+        "id": "cellular"
+      },
+      {
+        "type": "vector",
+        "id": "wifi"
+      },
+      {
+        "type": "group",
+        "id": "ic-left"
+      },
+      {
+        "type": "text",
+        "id": "title"
+      },
+      {
+        "type": "group",
+        "id": "icon buttons"
+      },
+      {
+        "type": "vector",
+        "id": "shape"
+      },
+      {
+        "type": "text",
+        "id": "world"
+      },
+      {
+        "type": "text",
+        "id": "icon"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 2"
+      },
+      {
+        "type": "text",
+        "id": "Sign up"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 1"
+      },
+      {
+        "type": "text",
+        "id": "Login"
+      }
+    ],
+    "modes": {
+      "Login/Sign up": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": false,
+            "children": [
+              "Top Bar",
+              "SignupBtn",
+              "image 1",
+              "UWallet",
+              "LoginBtn"
+            ],
+            "background-color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 0.011764705882352941
+            }
+          },
+          {
+            "id": "Top Bar",
+            "drop-shadow": {
+              "color": {
+                "alpha": 0.11764705882352941,
+                "hue": 0.0,
+                "saturation": 0.0,
+                "value": 0.0
+              },
+              "blur": 6.0,
+              "offset-x": 0.0,
+              "offset-y": 0.0,
+              "spread": 0.0,
+              "blend-mode": "normal"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 360.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "main-axis-align": "start",
+            "cross-axis-align": "start",
+            "children": [
+              "top",
+              "content"
+            ],
+            "background-color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "clip-content": false
+          },
+          {
+            "id": "SignupBtn",
+            "border-radius": 20.0,
+            "drop-shadow": {
+              "color": {
+                "alpha": 0.24705882352941178,
+                "hue": 0.0,
+                "saturation": 0.0,
+                "value": 0.0
+              },
+              "blur": 4.0,
+              "offset-x": 0.0,
+              "offset-y": 4.0,
+              "spread": 0.0,
+              "blend-mode": "normal"
+            },
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 50.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 621.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 261.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 59.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Rectangle 2",
+              "Sign up"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "image 1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 55.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 197.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 251.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 153.0
+              }
+            },
+            "image-content": "image_1.png",
+            "scale": "cover"
+          },
+          {
+            "id": "UWallet",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 54.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 400.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 246.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 55.0
+              }
+            },
+            "font-weight": 700.0,
+            "color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "text-content": "UWallet",
+            "overflow": "visible",
+            "max-lines": -1,
+            "text-align": "left",
+            "text-size": 64.0,
+            "line-height": 0.375,
+            "typeface": "Inter"
+          },
+          {
+            "id": "LoginBtn",
+            "border-radius": 20.0,
+            "drop-shadow": {
+              "color": {
+                "alpha": 0.24705882352941178,
+                "hue": 0.0,
+                "saturation": 0.0,
+                "value": 0.0
+              },
+              "blur": 4.0,
+              "offset-x": 0.0,
+              "offset-y": 4.0,
+              "spread": 0.0,
+              "blend-mode": "normal"
+            },
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 50.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 534.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 261.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 59.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "Rectangle 1",
+              "Login"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "top",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 24.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "time",
+              "battery",
+              "cellular",
+              "wifi"
+            ],
+            "background-color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "clip-content": false
+          },
+          {
+            "id": "content",
+            "padding": {
+              "left": 8.0,
+              "top": 12.0,
+              "right": 8.0,
+              "bottom": 12.0
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "arrangement": "row",
+            "main-axis-align": "start",
+            "children": [
+              "ic-left",
+              "title",
+              "icon buttons"
+            ],
+            "item-spacing": 8.0,
+            "clip-content": false
+          },
+          {
+            "id": "time",
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": -8.7177734375
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": 0.0234375
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 33.6396484375
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 10.2265625
+              }
+            },
+            "vector-content": "time.svg"
+          },
+          {
+            "id": "battery",
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": -51.0
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 9.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 14.0
+              }
+            },
+            "vector-content": "battery.svg"
+          },
+          {
+            "id": "cellular",
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": -69.0
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 14.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 14.0
+              }
+            },
+            "vector-content": "cellular.svg"
+          },
+          {
+            "id": "wifi",
+            "alignment": {
+              "horizontal": {
+                "attachment": "end",
+                "offset": -84.97732734680176
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 18.045255661010742
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 14.0
+              }
+            },
+            "vector-content": "wifi.svg"
+          },
+          {
+            "id": "ic-left",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 24.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 24.0
+              }
+            },
+            "is-structured": false,
+            "children": [
+              "shape"
+            ],
+            "clip-content": false
+          },
+          {
+            "id": "title",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "font-weight": 500.0,
+            "text-content": "UWallet",
+            "overflow": "visible",
+            "max-lines": -1,
+            "text-align": "left",
+            "text-size": 20.0,
+            "line-height": 1.2
+          },
+          {
+            "id": "icon buttons",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "arrangement": "row",
+            "main-axis-align": "start",
+            "children": [
+              "world",
+              "icon"
+            ],
+            "item-spacing": 8.0,
+            "clip-content": false
+          },
+          {
+            "id": "shape",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": 0.0
+              },
+              "vertical": {
+                "attachment": "center",
+                "offset": 0.0
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 10.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 18.0
+              }
+            },
+            "vector-content": "shape.svg"
+          },
+          {
+            "id": "world",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 24.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "text-content": "🌍",
+            "overflow": "ellipsis",
+            "max-lines": -1,
+            "text-align-vertical": "center",
+            "text-size": 16.0,
+            "line-height": 1.5
+          },
+          {
+            "id": "icon",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 24.0
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "text-content": "📞",
+            "overflow": "ellipsis",
+            "max-lines": -1,
+            "text-align-vertical": "center",
+            "text-size": 16.0,
+            "line-height": 1.5
+          },
+          {
+            "id": "Rectangle 2",
+            "border-radius": 20.0,
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 261.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 59.0
+              }
+            },
+            "vector-content": "rectangle_2.svg"
+          },
+          {
+            "id": "Sign up",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 84.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 15.0
+              }
+            },
+            "font-weight": 700.0,
+            "color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "text-content": "Sign up",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": 25.0,
+            "line-height": 1.210227279663086,
+            "typeface": "Inter"
+          },
+          {
+            "id": "Rectangle 1",
+            "border-radius": 20.0,
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": 261.0
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": 59.0
+              }
+            },
+            "vector-content": "rectangle_1.svg"
+          },
+          {
+            "id": "Login",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": 96.0
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": 15.0
+              }
+            },
+            "font-weight": 700.0,
+            "color": {
+              "alpha": 1.0,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "value": 1.0
+            },
+            "text-content": "Login",
+            "overflow": "visible",
+            "text-align": "left",
+            "text-size": 25.0,
+            "line-height": 1.210227279663086,
+            "typeface": "Inter"
+          }
+        ]
+      }
+    }
+  },
+  "previews": [
+    {
+      "design": "Login/Sign up",
+      "size": {
+        "width": 360.0,
+        "height": 800.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

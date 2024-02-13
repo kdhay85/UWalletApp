@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyTwoButtons</string>
+    <string name="login_press">Login</string>
+    <string name="main_text">Hello World</string>
+</resources>
