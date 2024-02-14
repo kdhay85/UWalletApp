@@ -7,15 +7,15 @@
 
     <ImageView
         android:id="@+id/um_logo"
+        android:contentDescription = "@string/app_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/um_logo"
-        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:layout_weight="1"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
-        android:layout_weight="1">
+        android:src="@drawable/um_logo">
 
     </ImageView>
 
@@ -23,12 +23,11 @@
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:onClick="myClickHandler"
         android:text="@string/login_press"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp">
-    </Button>
-
+        ></Button>
 
 
 </LinearLayout>
