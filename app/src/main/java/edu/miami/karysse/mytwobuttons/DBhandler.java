@@ -10,11 +10,11 @@ import android.util.Log;
 
 public class DBhandler extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "uwallet";
-    private static final int DB_VERSION = 1;
+    static final String DB_NAME = "uwallet";
+    static final int DB_VERSION = 1;
 
     // Hardcoded file path to the database
-    private static final String DB_FILE_PATH = "/data/data/edu.miami.karysse.mytwobuttons/databases/uwallet_db.sqlite.sqlite";
+    static final String DB_FILE_PATH = "/data/data/edu.miami.karysse.mytwobuttons/databases/uwallet_db";
 
     public DBhandler(Context context) {
         super(context, DB_FILE_PATH, null, DB_VERSION);
@@ -33,7 +33,7 @@ public class DBhandler extends SQLiteOpenHelper {
     public boolean isValidCredentials(String email, String password) {
         SQLiteDatabase db = null;
         Cursor cursor = null;
-        boolean isValid = false;
+        boolean isValid = true;
 
         try {
             db = SQLiteDatabase.openDatabase(DB_FILE_PATH, null, SQLiteDatabase.OPEN_READONLY);
@@ -42,10 +42,11 @@ public class DBhandler extends SQLiteOpenHelper {
             String[] selectionArgs = {email, password};
             cursor = db.query("person", columns, selection, selectionArgs, null, null, null);
 
-            // Log the contents of the cursor
-            if (cursor.moveToFirst()) {
+            // Check if the cursor has any rows
+            if (cursor != null && cursor.moveToFirst()) {
+                isValid = true; // Set the isValid flag to true
+                // Log the contents of the cursor
                 do {
-
                     Log.d("DBContents", "Worked");
                 } while (cursor.moveToNext());
             } else {
@@ -65,5 +66,6 @@ public class DBhandler extends SQLiteOpenHelper {
 
         return isValid;
     }
+
 
 }

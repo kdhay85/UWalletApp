@@ -29,6 +29,10 @@
         </activity>
 
         <activity android:name=".HomeActivity" />
+        <activity android:name=".MealActivity" />
+        <activity android:name=".DoorActivity" />
+
+
     </application>
 
 

@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
-        File dbFile = new File(getExternalFilesDir(null), "uwallet_db.sqlite");
+        File dbFile = new File(getExternalFilesDir(null), "uwallet_db");
 
         dbHandler = new DBhandler(this);
 
@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (isValid) {
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
         } else {

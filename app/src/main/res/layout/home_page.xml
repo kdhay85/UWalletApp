@@ -8,10 +8,10 @@
 
     <!-- User Profile Section -->
     <Button
-        android:id="@+id/userProfileButton"
+        android:id="@+id/useCardNow"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="My Profile"
+        android:text="Use Card Now"
         android:textSize="30sp"
         android:textColor="#FFFF"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,8 @@
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.671"
+        android:onClick="mealClick"/>
 
     <TextView
         android:id="@+id/mealPlanText"
@@ -66,8 +67,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userProfileButton"
-        app:layout_constraintVertical_bias="0.738" />
+        app:layout_constraintTop_toBottomOf="@id/useCardNow"
+        app:layout_constraintVertical_bias="0.738"
+        android:onClick="doorClick"/>
 
     <TextView
         android:id="@+id/doorAccessText"
