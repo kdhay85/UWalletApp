@@ -32,7 +32,7 @@
         android:id="@+id/uwallet_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UWallet"
+        android:text="Wallet"
         android:textColor="#FFFFFF"
         android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +75,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
         android:onClick="loginClick"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.453"
+        android:backgroundTint="#808080"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

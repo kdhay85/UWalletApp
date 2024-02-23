@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "784367599263",
+    "firebase_url": "https://uwallet-firebase-default-rtdb.firebaseio.com",
+    "project_id": "uwallet-firebase",
+    "storage_bucket": "uwallet-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784367599263:android:fcc65dd6af1e2a88562caa",
+        "android_client_info": {
+          "package_name": "edu.miami.karysse.mytwobuttons"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD98RXxy3fBatLYuTmPrr_6Waihki5muQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

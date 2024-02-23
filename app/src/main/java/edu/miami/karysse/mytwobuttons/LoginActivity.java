@@ -1,51 +1,78 @@
 package edu.miami.karysse.mytwobuttons;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
 import android.widget.EditText;
-import java.io.File;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private DBhandler dbHandler;
+    private FirebaseAuth auth;
     private EditText emailEditText;
     private EditText passwordEditText;
+    private Button loginButton;
+
+    //private DataSQLiteDB dataSQLiteDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
-        File dbFile = new File(getExternalFilesDir(null), "uwallet_db");
-
-        dbHandler = new DBhandler(this);
-
-        // Initialize the EditText views
+        auth = FirebaseAuth.getInstance();
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
+        loginButton = findViewById(R.id.loginSubmitButton);
 
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                String email = emailEditText.getText().toString().trim();
+                String password = passwordEditText.getText().toString().trim();
 
+                if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    if(!password.isEmpty()) {
+                        auth.signInWithEmailAndPassword(email, password)
+                                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                    @Override
+                                    public void onSuccess(AuthResult authResult) {
+                                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                        finish();
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }else {
+                        passwordEditText.setError("Password cannot be empty");
+                    }
+                }else if(email.isEmpty()){
+                    emailEditText.setError("Email cannot be empty");
+                }else{
+                    emailEditText.setError("Please enter valid email");
+                }
+            }
+        });
     }
 
-    public void loginClick(View view) {
-        // Get user's email and password from the EditText views
-        String email = emailEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
 
-        // Check if the email and password match an existing record in the database
-        boolean isValid = dbHandler.isValidCredentials(email, password);
-
-        if (isValid) {
-            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-        } else {
-            // Display an error message
-            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //dataSQLiteDB.close();
     }
 }
