@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
         android:onClick="loginClick"
         app:layout_constraintVertical_bias="0.453"
-        android:backgroundTint="#808080"/>
+        android:backgroundTint="@color/DarkGray"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

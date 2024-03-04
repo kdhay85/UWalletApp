@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 //KAILA
 public class HomeActivity extends AppCompatActivity {
 
@@ -16,9 +19,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
 
-        ImageButton mealPlanButton = findViewById(R.id.mealPlanButton);
-        ImageButton doorAccessButton = findViewById(R.id.doorAccessButton);
+        Button mealPlanButton = findViewById(R.id.mealPlanButton);
+        Button doorAccessButton = findViewById(R.id.doorAccessButton);
         Button cardAccessButton = findViewById(R.id.useCardNow);
+        Button settingsButton = findViewById(R.id.settingsButton);
         mealPlanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +45,16 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle click for door access button
                 Toast.makeText(HomeActivity.this, "Using card now", Toast.LENGTH_SHORT).show();
+            }
+        });
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle click for settings button
+                Toast.makeText(HomeActivity.this, "Settings Button Clicked", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                finish();
             }
         });
     }

@@ -4,7 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MealActivity">
+    tools:context=".MealActivity"
+    android:background="@color/cream">
+
+
+    <TextView
+        android:id="@+id/mealPlanIDTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal Plan ID:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/mealPlanIDValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Meal Swipes -->
     <TextView
@@ -14,7 +33,7 @@
         android:text="Meal Swipes:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/mealPlanIDTextView" />
 
     <TextView
         android:id="@+id/mealSwipesValueTextView"
@@ -23,7 +42,7 @@
         android:text="10"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/mealPlanIDValueTextView" />
 
     <!-- Guest Swipes -->
     <TextView
@@ -33,7 +52,7 @@
         android:text="Guest Swipes:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mealSwipesValueTextView" />
+        app:layout_constraintTop_toBottomOf="@id/mealSwipesTextView" />
 
     <TextView
         android:id="@+id/guestSwipesValueTextView"
@@ -53,7 +72,7 @@
         android:text="Dining Dollars:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guestSwipesValueTextView" />
+        app:layout_constraintTop_toBottomOf="@id/guestSwipesTextView" />
 
     <TextView
         android:id="@+id/diningDollarsValueTextView"
@@ -72,7 +91,7 @@
         android:text="Last Transactions:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/diningDollarsValueTextView" />
+        app:layout_constraintTop_toBottomOf="@id/diningDollarsTextView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transactionsRecyclerView"
