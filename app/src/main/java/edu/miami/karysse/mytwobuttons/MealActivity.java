@@ -17,8 +17,10 @@ public class MealActivity extends AppCompatActivity {
 
     private static final String TAG = "MealActivity";
 
-    private FirebaseFirestore db;
-    private FirebaseAuth auth;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
+
+    private DocumentReference emailDoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,31 +28,29 @@ public class MealActivity extends AppCompatActivity {
         setContentView(R.layout.meal_page);
 
         // Initialize Firestore
-        db = FirebaseFirestore.getInstance();
+
 
         // Initialize Firebase Auth
-        auth = FirebaseAuth.getInstance();
+        //auth = FirebaseAuth.getInstance();
 
         // Get the currently logged-in user
         FirebaseUser user = auth.getCurrentUser();
 
         if (user != null) {
             // Get the user's cane_id
-            String cane_id = user.getUid();
+            String email = user.getEmail();
 
             // Get a reference to the "student_and_meal" collection
-            DocumentReference docRef = db.collection("student_and_meal").document(cane_id);
+            emailDoc = db.collection("users").document(email);
 
             // Get the document
-            docRef.get().addOnCompleteListener(task -> {
+            // Get the document
+            emailDoc.get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        // Get the meal_plan_id from the document
-                        String mealPlanId = document.getString("meal_plan_id");
-
-                        // Get a reference to the "meal_plans" collection
-                        DocumentReference mealPlanRef = db.collection("meal_plans").document(mealPlanId);
+                        // Get the meal_plan document within the person subcollection of the user's document
+                        DocumentReference mealPlanRef = emailDoc.collection("person").document("meal_plan");
 
                         // Get the meal plan document
                         mealPlanRef.get().addOnCompleteListener(mealPlanTask -> {
@@ -58,19 +58,29 @@ public class MealActivity extends AppCompatActivity {
                                 DocumentSnapshot mealPlanDocument = mealPlanTask.getResult();
                                 if (mealPlanDocument.exists()) {
                                     // Get the meal plan data
-                                    String mealSwipes = mealPlanDocument.getString("swipes");
-                                    String guestSwipes = mealPlanDocument.getString("guest_swipes");
-                                    String diningDollars = mealPlanDocument.getString("dining_dollars");
+
+                                    long mealSwipes = mealPlanDocument.getLong("swipes");
+                                    long guestSwipes = mealPlanDocument.getLong("guest_swipes");
+                                    long diningDollars = mealPlanDocument.getLong("dining_dollars");
+                                    String mealPlanName = mealPlanDocument.getString("meal_plan_name");
+
+                                    // Convert to strings
+                                    String mealSwipesString = String.valueOf(mealSwipes);
+                                    String guestSwipesString = String.valueOf(guestSwipes);
+                                    String diningDollarsString = String.valueOf(diningDollars);
 
                                     // Update UI with the meal plan data
+                                    TextView mealPlanNameValueTextView = findViewById(R.id.mealPlanIDValueTextView);
+                                    mealPlanNameValueTextView.setText(mealPlanName);
+
                                     TextView mealSwipesValueTextView = findViewById(R.id.mealSwipesValueTextView);
-                                    mealSwipesValueTextView.setText(mealSwipes);
+                                    mealSwipesValueTextView.setText(mealSwipesString);
 
                                     TextView guestSwipesValueTextView = findViewById(R.id.guestSwipesValueTextView);
-                                    guestSwipesValueTextView.setText(guestSwipes);
+                                    guestSwipesValueTextView.setText(guestSwipesString);
 
                                     TextView diningDollarsValueTextView = findViewById(R.id.diningDollarsValueTextView);
-                                    diningDollarsValueTextView.setText(diningDollars);
+                                    diningDollarsValueTextView.setText(diningDollarsString);
                                 } else {
                                     Log.d(TAG, "No such meal plan document");
                                 }
@@ -88,4 +98,3 @@ public class MealActivity extends AppCompatActivity {
         }
     }
 }
-
