@@ -2,4 +2,6 @@
     <string name="app_name">MyTwoButtons</string>
     <string name="login_press">Login</string>
     <string name="main_text">Hello World</string>
+    <string name="apdu_service_description">HCE Service Description</string>
+    <string name="aid_group_description">AID Group Description</string>
 </resources>

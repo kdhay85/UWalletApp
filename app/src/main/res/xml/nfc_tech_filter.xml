@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Define NFC tech filter -->
+    <tech-list>
+        <!-- Support for NFC-B technology -->
+        <tech>android.nfc.tech.NfcB</tech>
+
+        <!-- Support for NFC-F technology -->
+        <tech>android.nfc.tech.NfcF</tech>
+    </tech-list>
+
+</resources>

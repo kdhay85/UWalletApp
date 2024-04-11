@@ -27,12 +27,6 @@ public class MealActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meal_page);
 
-        // Initialize Firestore
-
-
-        // Initialize Firebase Auth
-        //auth = FirebaseAuth.getInstance();
-
         // Get the currently logged-in user
         FirebaseUser user = auth.getCurrentUser();
 
@@ -68,10 +62,6 @@ public class MealActivity extends AppCompatActivity {
                                     String mealSwipesString = String.valueOf(mealSwipes);
                                     String guestSwipesString = String.valueOf(guestSwipes);
                                     String diningDollarsString = String.valueOf(diningDollars);
-
-                                    // Update UI with the meal plan data
-                                    TextView mealPlanNameValueTextView = findViewById(R.id.mealPlanIDValueTextView);
-                                    mealPlanNameValueTextView.setText(mealPlanName);
 
                                     TextView mealSwipesValueTextView = findViewById(R.id.mealSwipesValueTextView);
                                     mealSwipesValueTextView.setText(mealSwipesString);

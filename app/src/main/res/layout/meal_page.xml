@@ -4,36 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MealActivity"
-    android:background="@color/cream">
+    android:background="@color/white"
+    tools:context=".MealActivity">
 
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/um_logo"
+        android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/mealPlanIDTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Meal Plan ID:"
-        android:textSize="18sp"
+    <ImageView
+        android:id="@+id/um_logo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/um_logo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/mealPlanIDValueTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
 
-    <!-- Meal Swipes -->
     <TextView
         android:id="@+id/mealSwipesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meal Swipes:"
+        android:text="Meal Swipes"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mealPlanIDTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/divider6"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
 
     <TextView
         android:id="@+id/mealSwipesValueTextView"
@@ -41,18 +43,22 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mealPlanIDValueTextView" />
+        app:layout_constraintBottom_toBottomOf="@id/mealSwipesTextView"
+        android:layout_marginEnd="16dp"/>
 
-    <!-- Guest Swipes -->
     <TextView
         android:id="@+id/guestSwipesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guest Swipes:"
+        android:text="Guest Swipes"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mealSwipesTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/mealSwipesTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
 
     <TextView
         android:id="@+id/guestSwipesValueTextView"
@@ -60,19 +66,22 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mealSwipesValueTextView" />
+        app:layout_constraintBottom_toBottomOf="@id/guestSwipesTextView"
+        android:layout_marginEnd="16dp"/>
 
-
-    <!-- Dining Dollars -->
     <TextView
         android:id="@+id/diningDollarsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dining Dollars:"
+        android:text="Dining Dollars"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guestSwipesTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/guestSwipesTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
 
     <TextView
         android:id="@+id/diningDollarsValueTextView"
@@ -80,25 +89,32 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guestSwipesValueTextView" />
+        app:layout_constraintBottom_toBottomOf="@id/diningDollarsTextView"
+        android:layout_marginEnd="16dp"/>
 
-    <!-- Last Transactions -->
     <TextView
         android:id="@+id/lastTransactionsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Last Transactions:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/diningDollarsTextView" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transactionsRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="⟝ LAST TRANSACTIONS ⟞"
+        android:textSize="15sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lastTransactionsTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/diningDollarsTextView" />
+
+    <GridView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/lastTransactionsTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "edu.miami.karysse.mytwobuttons"
         minSdk = 28
-        targetSdk = 33
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
 
