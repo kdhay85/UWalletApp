@@ -1,4 +1,4 @@
-package edu.miami.karysse.mytwobuttons;
+package edu.miami.karysse.UWallet;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("edu.miami.karysse.mytwobuttons", appContext.getPackageName());
+        assertEquals("edu.miami.karysse.UWallet", appContext.getPackageName());
     }
 }

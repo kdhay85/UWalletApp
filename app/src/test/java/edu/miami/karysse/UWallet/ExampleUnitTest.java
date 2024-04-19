@@ -1,4 +1,4 @@
-package edu.miami.karysse.mytwobuttons;
+package edu.miami.karysse.UWallet;
 
 import org.junit.Test;
 

@@ -4,54 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#FFFFFF">
 
 
     <ImageView
         android:id="@+id/logoImageView"
-        android:layout_width="304dp"
-        android:layout_height="310dp"
-        android:src="@drawable/um_logo"
+        android:layout_width="407dp"
+        android:layout_height="375dp"
+        android:src="@drawable/uwallet_logowhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
-
-    <TextView
-        android:id="@+id/uwallet_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wallet"
-        android:textColor="#FFFFFF"
-        android:textSize="75sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="20dp"
-        android:background="#FFFFFF"
+        android:background="#E6E6E3"
         android:hint="Email Address"
         app:layout_constraintBottom_toBottomOf="@+id/passwordEditText"
-        app:layout_constraintTop_toBottomOf="@+id/uwallet_text"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
         tools:layout_editor_absoluteX="0dp" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="80dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
+        android:background="#E6E6E3"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/loginSubmitButton"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText"
         tools:layout_editor_absoluteX="0dp" />
@@ -61,7 +47,7 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_below="@id/passwordEditText"
-        android:backgroundTint="@color/DarkGray"
+        android:backgroundTint="#808080"
         android:onClick="loginClick"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"

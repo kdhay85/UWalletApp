@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "edu.miami.karysse.mytwobuttons"
+    namespace = "edu.miami.karysse.UWallet"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "edu.miami.karysse.mytwobuttons"
+        applicationId = "edu.miami.karysse.UWallet"
         minSdk = 28
         targetSdk = 31
         versionCode = 1

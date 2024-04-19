@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#FFFFFF">
 
 
     <ImageView
-        android:id="@+id/um_logo"
+        android:id="@+id/uwallet_logowhite"
         android:layout_width="match_parent"
         android:layout_height="432dp"
         android:layout_weight="2"
         android:adjustViewBounds="true"
         android:contentDescription="@string/app_name"
         android:scaleType="centerInside"
-        android:src="@drawable/um_logo"
+        android:src="@drawable/uwallet_logowhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,6 @@
         android:id="@+id/login_button"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#808080"
         android:onClick="myClickHandler"
@@ -36,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/um_logo"
+        app:layout_constraintTop_toBottomOf="@+id/uwallet_logowhite"
         app:layout_constraintVertical_bias="0.225">
 
 

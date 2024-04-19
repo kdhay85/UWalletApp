@@ -1,4 +1,4 @@
-package edu.miami.karysse.mytwobuttons;
+package edu.miami.karysse.UWallet;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -29,7 +29,7 @@ public class MyHostApduService extends HostApduService {
     };
 
     private static final byte[] SUCCESS_RESPONSE = {
-            (byte)0x88, (byte)0x20
+            (byte)0x90, (byte)0x20
     };
 
     private static final byte[] FAILED_RESPONSE = {

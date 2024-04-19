@@ -1,6 +1,5 @@
-package edu.miami.karysse.mytwobuttons;
+package edu.miami.karysse.UWallet;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

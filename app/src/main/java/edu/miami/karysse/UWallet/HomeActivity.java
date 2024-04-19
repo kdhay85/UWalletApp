@@ -1,15 +1,11 @@
-package edu.miami.karysse.mytwobuttons;
+package edu.miami.karysse.UWallet;
 
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
-import android.nfc.NdefRecord;
-import android.os.Parcelable;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,9 +44,10 @@ public class HomeActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-                finish();
+                //FirebaseAuth.getInstance().signOut();
+                //startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+                startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
+                //finish();
             }
         });
     }

@@ -58,6 +58,10 @@
 
         <activity android:name=".MealActivity" />
         <activity android:name=".DoorActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".CaneCardActivity" />
+        <activity android:name=".InfoActivity" />
+
 
         <service android:name=".MyHostApduService" android:exported="true" android:permission="android.permission.BIND_NFC_SERVICE">
             <intent-filter>
